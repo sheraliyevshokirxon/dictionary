@@ -3,13 +3,14 @@ const box = document.querySelector(".box")
 
 
 export const meiningSpik = (wordEl) => {
-    console.log(wordEl[0].meanings[0].definitions.forEach((def) => {
-        console.log(def.definition)
-    }))
-    const div = document.createElement("div")
-    div.innerHTML = '';
-    const { phonetics, sourceUrls, word, audio, meanings, synonyms } = wordEl[0];
-    div.innerHTML = `
+    // console.log(wordEl[0].meanings[0].definitions.forEach((def) => {
+    //     console.log(def.definition)
+    // }))
+    box.innerHTML = ''
+    // const div = document.createElement("div")
+    // div.innerHTML = '';
+    const { phonetics, sourceUrls, word, meanings, synonyms } = wordEl[0];
+    box.innerHTML = `
         <section class="posledney">
                 <div class="noun-container container">
                     <p class="noun__desc">noun</p>
@@ -48,7 +49,7 @@ export const meiningSpik = (wordEl) => {
             </section>
 
             `
-    box.appendChild(div)
+    // box.appendChild(div)
 
     const title = document.querySelector(".key-title")
     const kdeck = document.querySelector(".key-desc")
@@ -56,7 +57,7 @@ export const meiningSpik = (wordEl) => {
 
     const playBtn = document.querySelector('.play-btn')
     playBtn.addEventListener('click', () => {
-        let audio = new Audio(phonetics[0].audio)
+        var audio = new Audio(phonetics[0].audio)
         audio.play()
     })
 
