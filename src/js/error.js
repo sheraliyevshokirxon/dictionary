@@ -9,8 +9,8 @@ function errorUI(error) {
     box.innerHTML = `
     <div class="error">
     <p class="sad">😕</p>
-    <h2 class="error__title">${error.title}</h2>
-    <p class="error__desc">${error.message + error.resolution}</p>
+    <h2 class="error__title">${"ERROOR"}</h2>
+    <p class="error__desc">${"no word with this meaning was found"}</p>
     </div>
     `;
 }

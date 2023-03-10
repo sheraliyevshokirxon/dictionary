@@ -47,11 +47,12 @@ max-width: 815px;
 margin-left: auto;
 margin-right: auto;
 padding-left: 40px;
-padding-right: 40px;
+/* padding-right: 40px; */
 }
 /* DROPDOWN
  */
  .dropbtn {
+  width: 150px;
     background-color: inherit;
     padding-top: 22px;
     font-size: 16px;
@@ -80,7 +81,7 @@ padding-right: 40px;
     font-family: serif;
     position: absolute;
     left: -20px;
-    background: #ffffff;
+    background:var(--cl-white1);
     /* color: #000; */
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -110,8 +111,8 @@ padding-right: 40px;
   }
   
   .dropdown-content li:hover {
-    background-color: #fff;
-    color: #a445ed;
+    background-color:var(--cl-white1);
+    color: var(--cl-syh);
     cursor: pointer;
     border-radius: 16px;
   }
@@ -133,8 +134,8 @@ padding-right: 40px;
   }
    
   .label {
-    width: 40px;
-    height: 16px;
+    width: 30px;
+    height: 15px;
     background-color: var(--cl-mocry);
     display: flex;
     border-radius:50px;
@@ -148,9 +149,9 @@ padding-right: 40px;
   .ball {
     width: 10px;
     height: 10px;
-    background-color: white;
+    background-color: var(--cl-white1);
     position: absolute;
-    top: 2px;
+    top:2px;
     left: 2px;
     border-radius: 50%;
     transition: transform 0.2s linear;
@@ -158,7 +159,7 @@ padding-right: 40px;
   
   /*  target the elemenent after the label*/
   .checkbox:checked + .label .ball{
-    transform: translateX(24px);
+    transform: translateX(15px);
   }
   .checkbox:checked + .label{
     background: var(--cl-syh);
@@ -185,18 +186,18 @@ padding-right: 40px;
 }
 .navabar {
     display: flex;
+    margin-right: 35px;
 }
 .nav-min-box{
     display: flex;
 }
 .oy{
-    margin-left: 40px;
+    margin-left: 30px;
 }
 .nav-list {
     margin-right: 25px;
 }
 .nav-list-item {
-    margin-right: 25px;
 }
 
 /* input */
@@ -209,6 +210,7 @@ padding-right: 40px;
    background: var(--cl-white2);
    border-radius: 16px;
 }
+
 .form {
     display: flex;  
     width: 100%;
@@ -219,14 +221,16 @@ padding-right: 40px;
     height: 64px;
     border: none;
     font-size: 25px;
-    bottom: none;
     background: inherit;
+    outline: none;
+
 }
 .lupa{
     /* position: absolute; */
     width: 15px;
     height: 15px;
     margin-top: 22px;
+ 
 }
 
 /* play */
@@ -245,7 +249,7 @@ padding-right: 40px;
 .key-desc {
     font-size: 24px;
     line-height: 29px;
-    color: #A445ED;
+    color: var(--cl-syh);
 
 }
 .play-btn {
@@ -289,7 +293,7 @@ padding-right: 40px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
-    color: #757575;
+    color: var(--cl-mocry);
 }
 .meining-item {
     font-weight: 400;
@@ -334,4 +338,16 @@ padding-right: 40px;
   font-size: 18px;
   line-height: 24px;
   color: var(--light1);
+}
+
+.empty {
+  margin-top: 8px;
+  display: none;
+  color: var(--cl-orang);
+  font-size: 2rem;
+  line-height: 24px;
+}
+
+.emptyUI {
+  display: block;
 }
